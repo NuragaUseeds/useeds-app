@@ -51,6 +51,13 @@
 		AEA0E1F82751CBE300398A9D /* useeds-app */ = {
 			isa = PBXGroup;
 			children = (
+				AEA0E20D2751CEAB00398A9D /* Customer */,
+				AEA0E20C2751CE9E00398A9D /* Constants */,
+				AEA0E20B2751CE9400398A9D /* Repositories */,
+				AEA0E20A2751CE8C00398A9D /* Services */,
+				AEA0E2092751CE7300398A9D /* Helper */,
+				AEA0E2082751CE6D00398A9D /* Model */,
+				AEA0E2072751CE5300398A9D /* Onboarding */,
 				AEA0E1F92751CBE300398A9D /* useeds_appApp.swift */,
 				AEA0E1FB2751CBE300398A9D /* ContentView.swift */,
 				AEA0E1FD2751CBE500398A9D /* Assets.xcassets */,
@@ -65,6 +72,79 @@
 				AEA0E2002751CBE500398A9D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AEA0E2072751CE5300398A9D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		AEA0E2082751CE6D00398A9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AEA0E2092751CE7300398A9D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		AEA0E20A2751CE8C00398A9D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AEA0E20B2751CE9400398A9D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AEA0E20C2751CE9E00398A9D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AEA0E20D2751CEAB00398A9D /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				AEA0E2102751CECD00398A9D /* Components */,
+				AEA0E20F2751CEC200398A9D /* ViewModels */,
+				AEA0E20E2751CEBB00398A9D /* Views */,
+			);
+			path = Customer;
+			sourceTree = "<group>";
+		};
+		AEA0E20E2751CEBB00398A9D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AEA0E20F2751CEC200398A9D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AEA0E2102751CECD00398A9D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
