@@ -45,6 +45,7 @@ struct HomeTabItem: View {
                         NavigationLink(destination: SelectionPlantView()) {
                             Image(systemName: "plus")
                                 .font(.system(size: 70))
+                                .foregroundColor(Color("Green5"))
                         }
                         if !plant.isEmpty {
                             ForEach(plant, id: \.self) { plant in
