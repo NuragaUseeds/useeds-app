@@ -19,6 +19,11 @@ struct ContentView: View {
                         Image(systemName: "house")
                         Text("Home")
                     }
+                ProfileTabItem()
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("Profile")
+                    }
             }
         }
     }
