@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE56AE782759119700C4B4AE /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56AE772759119700C4B4AE /* Customer.swift */; };
+		AE56AE7A2759119F00C4B4AE /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56AE792759119F00C4B4AE /* Plant.swift */; };
 		AEA0E1FA2751CBE300398A9D /* useeds_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0E1F92751CBE300398A9D /* useeds_appApp.swift */; };
 		AEA0E1FC2751CBE300398A9D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0E1FB2751CBE300398A9D /* ContentView.swift */; };
 		AEA0E1FE2751CBE500398A9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA0E1FD2751CBE500398A9D /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE56AE772759119700C4B4AE /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		AE56AE792759119F00C4B4AE /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		AEA0E1F62751CBE300398A9D /* useeds-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "useeds-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA0E1F92751CBE300398A9D /* useeds_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = useeds_appApp.swift; sourceTree = "<group>"; };
 		AEA0E1FB2751CBE300398A9D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 		AEA0E2082751CE6D00398A9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE56AE772759119700C4B4AE /* Customer.swift */,
+				AE56AE792759119F00C4B4AE /* Plant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE56AE782759119700C4B4AE /* Customer.swift in Sources */,
+				AE56AE7A2759119F00C4B4AE /* Plant.swift in Sources */,
 				AEA0E1FC2751CBE300398A9D /* ContentView.swift in Sources */,
 				AEA0E1FA2751CBE300398A9D /* useeds_appApp.swift in Sources */,
 			);
