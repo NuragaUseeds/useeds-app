@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE56AE782759119700C4B4AE /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56AE772759119700C4B4AE /* Customer.swift */; };
+		AE56AE7A2759119F00C4B4AE /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56AE792759119F00C4B4AE /* Plant.swift */; };
 		AEA030652753DED800290103 /* PlantSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA030642753DED700290103 /* PlantSelectionView.swift */; };
 		AEA030672753E90B00290103 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA030662753E90B00290103 /* PaymentView.swift */; };
 		AEA03069275511FB00290103 /* ProfileTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA03068275511FB00290103 /* ProfileTabItem.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE56AE772759119700C4B4AE /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		AE56AE792759119F00C4B4AE /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		AEA030642753DED700290103 /* PlantSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSelectionView.swift; sourceTree = "<group>"; };
 		AEA030662753E90B00290103 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		AEA03068275511FB00290103 /* ProfileTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabItem.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 		AEA0E2082751CE6D00398A9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE56AE772759119700C4B4AE /* Customer.swift */,
+				AE56AE792759119F00C4B4AE /* Plant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE56AE782759119700C4B4AE /* Customer.swift in Sources */,
+				AE56AE7A2759119F00C4B4AE /* Plant.swift in Sources */,
 				AEA0E21C2752694F00398A9D /* CardOrder.swift in Sources */,
 				AEA030672753E90B00290103 /* PaymentView.swift in Sources */,
 				AEA0E218275230DE00398A9D /* OrderSummaryView.swift in Sources */,
