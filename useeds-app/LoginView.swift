@@ -87,7 +87,7 @@ extension LoginView {
                     return
                 }
 
-            self.errorMessage = "Successfully created user: \(result?.user.uid ?? "")"
+            self.errorMessage = "Successfully logged in as a user: \(result?.user.uid ?? "")"
         }
     }
 
