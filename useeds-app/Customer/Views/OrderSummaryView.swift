@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OrderSummaryView: View {
-    let plants: [String]
+    let plants: [Plant]
     @State var show: Int? = 0
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -20,8 +20,8 @@ struct OrderSummaryView: View {
                     .padding(.bottom)
                 ScrollView  {
                     VStack(alignment: .leading) {
-                        ForEach(plants, id: \.self) { _ in
-                            CardOrder()
+                        ForEach(plants, id: \.id) { item in
+                            CardOrder(plant: item)
                         }
                     }
                     .padding()
@@ -97,6 +97,6 @@ struct OrderSummaryView: View {
 
 struct OrderSummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderSummaryView(plants: ["kuangkung", "bayam", "sayur", "lala", "huhu", "duar"])
+        OrderSummaryView(plants: Customer.preview.plants!)
     }
 }

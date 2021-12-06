@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Kangkung",
+        "description": "Adalah jenis tanaman yang paling banyak ditanam",
+        "category": "Free"
+    },
+
+    {
+        "name": "Bayam",
+        "description": "Adalah jenis tanaman yang paling sehat",
+        "category": "Premium"
+    },
+
+    {
+        "name": "Toge",
+        "description": "Adalah jenis tanaman yang paling banyak ditanam",
+        "category": "Free"
+    },
+
+    {
+        "name": "Kentang",
+        "description": "Adalah jenis tanaman yang umbi-umbian",
+        "category": "Premium"
+    }
+    
+]

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DeliveryView: View {
-    let plants: [String]
+    let plants: [Plant]
     @State var selections: String = ""
     var body: some View {
         VStack {
@@ -50,11 +50,11 @@ struct DeliveryView: View {
                     .font(.system(size: 16, weight: .bold))
             }.padding()
             Button {
-                let kata = plants.joined(separator: "%0a")
-                if let url = URL(string: "https://wa.me/+6282176835992?text=hello%0\(kata)"),
-                UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url, options: [:])
-                }
+//                let kata = plants.name.joined(separator: "%0a")
+//                if let url = URL(string: "https://wa.me/+6282176835992?text=hello%0\(kata)"),
+//                UIApplication.shared.canOpenURL(url) {
+//                UIApplication.shared.open(url, options: [:])
+//                }
             }label: {
                 Text("Proceed")
                     .font(.system(size: 16, weight: .bold))
@@ -72,6 +72,6 @@ struct DeliveryView: View {
 
 struct DeliveryView_Previews: PreviewProvider {
     static var previews: some View {
-        DeliveryView(plants: ["try"])
+        DeliveryView(plants: Customer.preview.plants!)
     }
 }

@@ -13,7 +13,12 @@ struct HomeTabItem: View {
         GridItem(.flexible())
     ]
     
-    @State var plant = [String]()
+    @StateObject private var viewModel: ViewModel
+    
+    init() {
+        let viewModel = ViewModel()
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         VStack(alignment: .center, spacing: 10) {
@@ -32,29 +37,32 @@ struct HomeTabItem: View {
             }
             .padding()
             ZStack {
-                if plant.isEmpty {
-                    VStack {
-                        Image("Hands")
-                            .font(.system(size: 70))
-                        Text("Add your plant first")
-                            .font(.system(size: 20, weight: .light))
-                    }
-                }
-                ScrollView {
-                    LazyVGrid(columns: columns, spacing: 40) {
-                        NavigationLink(destination: SelectionPlantView()) {
-                            Image(systemName: "plus")
+                if let plant = viewModel.customer.plants {
+                    if plant.isEmpty {
+                        VStack {
+                            Image("Hands")
                                 .font(.system(size: 70))
-                                .foregroundColor(Color("Green5"))
-                        }
-                        if !plant.isEmpty {
-                            ForEach(plant, id: \.self) { plant in
-                                Text(plant)
-                            }
+                            Text("Add your plant first")
+                                .font(.system(size: 20, weight: .light))
                         }
                     }
                     
-                }.padding()
+                    ScrollView {
+                        LazyVGrid(columns: columns, spacing: 40) {
+                            NavigationLink(destination: SelectionPlantView()) {
+                                Image(systemName: "plus")
+                                    .font(.system(size: 70))
+                                    .foregroundColor(Color("Green5"))
+                            }
+                            if !plant.isEmpty {
+                                ForEach(plant, id: \.id) { item in
+                                    RactangleCardPlants(plant: item)
+                                }
+                            }
+                        }
+                        
+                    }.padding()
+                }
             }
             
             

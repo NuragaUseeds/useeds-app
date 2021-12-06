@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import SwiftUI
+
 
 struct Plant: Codable, Identifiable {
     var id = UUID().uuidString
@@ -20,6 +22,12 @@ struct Plant: Codable, Identifiable {
     var payStatus: PayStatus?
     var statusMission: Mission?
     var plantingDuration : String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case description
+        case category
+    }
 }
 
 

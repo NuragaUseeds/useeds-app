@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct CardOrder: View {
+    let plant: Plant
     var body: some View {
         HStack {
             Image(systemName: "person")
                 .font(.system(size: 70))
             VStack(alignment: .leading, spacing: 10) {
-                Text("Lettuce")
+                Text(plant.name)
                     .font(.system(size: 16))
                 Text("Untuk konsumsi pribadi")
                     .font(.system(size: 12))
@@ -35,7 +36,7 @@ struct CardOrder: View {
 
 struct CardOrder_Previews: PreviewProvider {
     static var previews: some View {
-        CardOrder()
+        CardOrder(plant: (Customer.preview.plants?[0])!)
             .previewLayout(.sizeThatFits)
             .padding()
     }
