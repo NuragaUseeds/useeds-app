@@ -23,6 +23,7 @@
 		AEA0E21A275238C800398A9D /* DeliveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0E219275238C800398A9D /* DeliveryView.swift */; };
 		AEA0E21C2752694F00398A9D /* CardOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0E21B2752694F00398A9D /* CardOrder.swift */; };
 		AEA0E21E275272AB00398A9D /* AddressCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0E21D275272AB00398A9D /* AddressCards.swift */; };
+		AEB5C444275F9A7E007FA143 /* PlantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5C443275F9A7E007FA143 /* PlantDetailView.swift */; };
 		AEDD3813275D159D002D6EE7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD3812275D159D002D6EE7 /* HomeViewModel.swift */; };
 		AEDD3815275D1769002D6EE7 /* RactangleCardPlants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD3814275D1769002D6EE7 /* RactangleCardPlants.swift */; };
 		AEDD3817275DBB14002D6EE7 /* plantdata.json in Resources */ = {isa = PBXBuildFile; fileRef = AEDD3816275DBB14002D6EE7 /* plantdata.json */; };
@@ -47,6 +48,7 @@
 		AEA0E219275238C800398A9D /* DeliveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryView.swift; sourceTree = "<group>"; };
 		AEA0E21B2752694F00398A9D /* CardOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOrder.swift; sourceTree = "<group>"; };
 		AEA0E21D275272AB00398A9D /* AddressCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCards.swift; sourceTree = "<group>"; };
+		AEB5C443275F9A7E007FA143 /* PlantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailView.swift; sourceTree = "<group>"; };
 		AEDD3812275D159D002D6EE7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AEDD3814275D1769002D6EE7 /* RactangleCardPlants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RactangleCardPlants.swift; sourceTree = "<group>"; };
 		AEDD3816275DBB14002D6EE7 /* plantdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plantdata.json; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				AEA0E219275238C800398A9D /* DeliveryView.swift */,
 				AEA030642753DED700290103 /* PlantSelectionView.swift */,
 				AEA030662753E90B00290103 /* PaymentView.swift */,
+				AEB5C443275F9A7E007FA143 /* PlantDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				AEA03069275511FB00290103 /* ProfileTabItem.swift in Sources */,
 				AEA0E2122751D09000398A9D /* HomeTabItem.swift in Sources */,
 				AEA0E2162751E2B000398A9D /* SelectionPlantView.swift in Sources */,
+				AEB5C444275F9A7E007FA143 /* PlantDetailView.swift in Sources */,
 				AEA0E21E275272AB00398A9D /* AddressCards.swift in Sources */,
 				AEA0E1FC2751CBE300398A9D /* ContentView.swift in Sources */,
 				AEDD3813275D159D002D6EE7 /* HomeViewModel.swift in Sources */,

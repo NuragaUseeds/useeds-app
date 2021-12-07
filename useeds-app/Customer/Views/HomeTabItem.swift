@@ -56,7 +56,10 @@ struct HomeTabItem: View {
                             }
                             if !plant.isEmpty {
                                 ForEach(plant, id: \.id) { item in
-                                    RactangleCardPlants(plant: item)
+                                    NavigationLink(destination: PlantDetailView(plant: item)) {
+                                        RactangleCardPlants(plant: item)
+                                            .foregroundColor(.black)
+                                    }
                                 }
                             }
                         }
