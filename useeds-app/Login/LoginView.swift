@@ -9,9 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     @State var isLogin = false
-    @State var email = ""
-    @State var password = ""
-    @State var errorMessage = ""
+    @ObservedObject var viewModel = LoginViewModel()
 
     var body: some View {
         NavigationView {
@@ -36,10 +34,10 @@ struct LoginView: View {
                     }
 
                     Group {
-                        TextField("Email", text: $email)
+                        TextField("Email", text: $viewModel.email)
                             .keyboardType(.emailAddress)
                             .autocapitalization(.none)
-                        SecureField("Password", text: $password)
+                        SecureField("Password", text: $viewModel.password)
                     }
                     .padding(12)
                     .background(Color.white)
@@ -58,7 +56,7 @@ struct LoginView: View {
 
                     }
 
-                    Text(self.errorMessage)
+                    Text(viewModel.errorMessage)
                         .foregroundColor(.red)
                 }
                 .padding(16)
@@ -80,25 +78,25 @@ extension LoginView {
     }
 
     private func userLogin() {
-        FirebaseManager.shared.auth.signIn(withEmail: email, password: password) {
+        FirebaseManager.shared.auth.signIn(withEmail: viewModel.email, password: viewModel.password) {
             result, error in
                 if let error = error {
-                    self.errorMessage = "Failed to logged in as user: \(error)"
+                    viewModel.errorMessage = "Failed to logged in as user: \(error)"
                     return
                 }
 
-            self.errorMessage = "Successfully logged in as a user: \(result?.user.uid ?? "")"
+            viewModel.errorMessage = "Successfully logged in as a user: \(result?.user.uid ?? "")"
         }
     }
 
     private func createNewAccount() {
-        FirebaseManager.shared.auth.createUser(withEmail: email, password: password) { result, error in
+        FirebaseManager.shared.auth.createUser(withEmail: viewModel.email, password: viewModel.password) { result, error in
             if let error = error {
-                self.errorMessage = "Failed to create user: \(error)"
+                viewModel.errorMessage = "Failed to create user: \(error)"
                 return
             }
 
-            self.errorMessage = "Successfully created user: \(result?.user.uid ?? "")"
+            viewModel.errorMessage = "Successfully created user: \(result?.user.uid ?? "")"
         }
     }
 }
