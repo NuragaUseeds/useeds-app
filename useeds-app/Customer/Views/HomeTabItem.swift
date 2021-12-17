@@ -59,6 +59,7 @@ struct HomeTabItem: View {
                                     NavigationLink(destination: PlantDetailView(plant: item)) {
                                         RactangleCardPlants(plant: item)
                                             .foregroundColor(.black)
+                                            .padding(5)
                                     }
                                 }
                             }

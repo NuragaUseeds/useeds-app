@@ -10,6 +10,8 @@ import SwiftUI
 struct OrderSummaryView: View {
     let plants: [Plant]
     @State var show: Int? = 0
+    var subTotal = 0
+    var total = 0
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack(spacing: 0) {
@@ -33,7 +35,7 @@ struct OrderSummaryView: View {
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(Color("Green5"))
                         Spacer()
-                        Text("Rp. 20.000")
+                        Text("\(plants.reduce(0, {$0 + $1.price}))")
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(Color("Green5"))
                     }

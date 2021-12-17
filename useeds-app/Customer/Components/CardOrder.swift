@@ -16,10 +16,10 @@ struct CardOrder: View {
             VStack(alignment: .leading, spacing: 10) {
                 Text(plant.name)
                     .font(.system(size: 16))
-                Text("Untuk konsumsi pribadi")
+                Text(plant.category.rawValue)
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
-                Text("Rp. 3000")
+                Text("Rp. \(plant.price)")
                     .font(.system(size: 12, weight: .bold))
             }
             Spacer()

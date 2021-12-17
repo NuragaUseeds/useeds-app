@@ -26,7 +26,14 @@ struct PlantSelectionView: View {
                     ForEach(items) { selectable in
                         Button(action: { toggleSelection(selectable: selectable) }) {
                             HStack {
-                                Text(selectable.name).foregroundColor(.black)
+                                VStack(alignment: .leading) {
+                                    Text(selectable.name)
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 17, weight: .semibold))
+                                    Text(selectable.category.rawValue)
+                                        .foregroundColor(.gray)
+                                        .font(.system(size: 15, weight: .regular))
+                                }
                                 Spacer()
                                 if selections.contains { $0.id == selectable.id } {
                                     Image(systemName: "checkmark")
@@ -51,11 +58,11 @@ struct PlantSelectionView: View {
     
 }
 
-//struct PlantSelectionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlantSelectionView(items: ["Sayur", "Mayur", "Kangkung", "Bayam", "Ayam"], selections: .constant(["Sayur"]))
-//    }
-//}
+struct PlantSelectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        PlantSelectionView(items: Customer.preview.plants!, selections: .constant(Customer.preview.plants!))
+    }
+}
 
 struct MultipleSelectionRow: View {
     var plant: Plant

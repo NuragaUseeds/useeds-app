@@ -33,16 +33,20 @@ struct SelectionPlantView: View {
                             Text("Edit Your Plants")
                                 .font(.system(size: 16, weight: .regular))
                                 .foregroundColor(.gray)
+                                .frame(width: UIScreen.main.bounds.width/1.2)
+                                .padding(.vertical)
+                                .background(Color.white)
+                                .cornerRadius(8)
                         } else {
                             Text("Select Your Plants")
                                 .font(.system(size: 16, weight: .regular))
-                                .foregroundColor(.gray)
+                                       .foregroundColor(.gray)
+                                .frame(width: UIScreen.main.bounds.width/1.2)
+                                .padding(.vertical)
+                                .background(Color.white)
+                                .cornerRadius(8)
                         }
                     }
-                    .padding(.vertical)
-                    .frame(width: UIScreen.main.bounds.width/1.2)
-                    .background(Color.white)
-                    .cornerRadius(8)
                 }
                 
                 Spacer(minLength: 100)
@@ -74,13 +78,13 @@ struct SelectionPlantView: View {
                 }label: {
                     Text("PlANT NOW")
                         .font(.system(size: 16, weight: .bold))
-                        .foregroundColor(.white)
+                        .foregroundColor(selections.isEmpty ? .gray : .white)
                         .padding(.vertical, 20)
                         .frame(width: UIScreen.main.bounds.width/1.2)
-                        .background(Color("BlueButton"))
+                        .background(selections.isEmpty ? Color(.systemGray4) : Color("BlueButton"))
                         .cornerRadius(8)
                     
-                }
+                }.disabled(selections.isEmpty)
                 NavigationLink(destination: OrderSummaryView(plants: selections), tag: 1, selection: $show) {
                     EmptyView()
                 }

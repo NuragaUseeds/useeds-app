@@ -24,10 +24,22 @@
 		AEA0E21C2752694F00398A9D /* CardOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0E21B2752694F00398A9D /* CardOrder.swift */; };
 		AEA0E21E275272AB00398A9D /* AddressCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0E21D275272AB00398A9D /* AddressCards.swift */; };
 		AEB5C444275F9A7E007FA143 /* PlantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5C443275F9A7E007FA143 /* PlantDetailView.swift */; };
+		AED875A5276AD88300DC20CA /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED875A4276AD88300DC20CA /* Article.swift */; };
+		AED875A7276AD9B100DC20CA /* ArticleTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED875A6276AD9B100DC20CA /* ArticleTabItem.swift */; };
+		AED875A9276ADB7500DC20CA /* ArticleCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED875A8276ADB7500DC20CA /* ArticleCards.swift */; };
+		AED875AB276ADEE900DC20CA /* ArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED875AA276ADEE900DC20CA /* ArticleList.swift */; };
+		AED875AF276AEBD300DC20CA /* CategoryStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED875AE276AEBD300DC20CA /* CategoryStack.swift */; };
+		AED875B3276B07EC00DC20CA /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED875B2276B07EC00DC20CA /* ArticleDetailView.swift */; };
+		AED875B5276B082D00DC20CA /* HistoryTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED875B4276B082D00DC20CA /* HistoryTabItem.swift */; };
+		AED875B7276B0E1200DC20CA /* DeliveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED875B6276B0E1200DC20CA /* DeliveryViewModel.swift */; };
+		AED875B9276C1BE900DC20CA /* HistoryCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED875B8276C1BE900DC20CA /* HistoryCards.swift */; };
 		AEDD3813275D159D002D6EE7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD3812275D159D002D6EE7 /* HomeViewModel.swift */; };
 		AEDD3815275D1769002D6EE7 /* RactangleCardPlants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD3814275D1769002D6EE7 /* RactangleCardPlants.swift */; };
 		AEDD3817275DBB14002D6EE7 /* plantdata.json in Resources */ = {isa = PBXBuildFile; fileRef = AEDD3816275DBB14002D6EE7 /* plantdata.json */; };
 		AEDD3819275DBB78002D6EE7 /* LoadDataFromJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD3818275DBB78002D6EE7 /* LoadDataFromJson.swift */; };
+		AEE5CDF42768719700C98C84 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5CDF32768719700C98C84 /* Mission.swift */; };
+		AEE5CDF62768A95E00C98C84 /* MissionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5CDF52768A95E00C98C84 /* MissionList.swift */; };
+		AEE5CDF82768F50B00C98C84 /* PlantDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5CDF72768F50B00C98C84 /* PlantDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,10 +61,22 @@
 		AEA0E21B2752694F00398A9D /* CardOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOrder.swift; sourceTree = "<group>"; };
 		AEA0E21D275272AB00398A9D /* AddressCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCards.swift; sourceTree = "<group>"; };
 		AEB5C443275F9A7E007FA143 /* PlantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailView.swift; sourceTree = "<group>"; };
+		AED875A4276AD88300DC20CA /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		AED875A6276AD9B100DC20CA /* ArticleTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTabItem.swift; sourceTree = "<group>"; };
+		AED875A8276ADB7500DC20CA /* ArticleCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCards.swift; sourceTree = "<group>"; };
+		AED875AA276ADEE900DC20CA /* ArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleList.swift; sourceTree = "<group>"; };
+		AED875AE276AEBD300DC20CA /* CategoryStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryStack.swift; sourceTree = "<group>"; };
+		AED875B2276B07EC00DC20CA /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		AED875B4276B082D00DC20CA /* HistoryTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTabItem.swift; sourceTree = "<group>"; };
+		AED875B6276B0E1200DC20CA /* DeliveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewModel.swift; sourceTree = "<group>"; };
+		AED875B8276C1BE900DC20CA /* HistoryCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCards.swift; sourceTree = "<group>"; };
 		AEDD3812275D159D002D6EE7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AEDD3814275D1769002D6EE7 /* RactangleCardPlants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RactangleCardPlants.swift; sourceTree = "<group>"; };
 		AEDD3816275DBB14002D6EE7 /* plantdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plantdata.json; sourceTree = "<group>"; };
 		AEDD3818275DBB78002D6EE7 /* LoadDataFromJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataFromJson.swift; sourceTree = "<group>"; };
+		AEE5CDF32768719700C98C84 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		AEE5CDF52768A95E00C98C84 /* MissionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionList.swift; sourceTree = "<group>"; };
+		AEE5CDF72768F50B00C98C84 /* PlantDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +144,8 @@
 				AEDD3816275DBB14002D6EE7 /* plantdata.json */,
 				AE56AE772759119700C4B4AE /* Customer.swift */,
 				AE56AE792759119F00C4B4AE /* Plant.swift */,
+				AEE5CDF32768719700C98C84 /* Mission.swift */,
+				AED875A4276AD88300DC20CA /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,12 +195,15 @@
 			children = (
 				AEA0E2112751D09000398A9D /* HomeTabItem.swift */,
 				AEA03068275511FB00290103 /* ProfileTabItem.swift */,
+				AED875A6276AD9B100DC20CA /* ArticleTabItem.swift */,
+				AED875B4276B082D00DC20CA /* HistoryTabItem.swift */,
 				AEA0E2152751E2B000398A9D /* SelectionPlantView.swift */,
 				AEA0E217275230DE00398A9D /* OrderSummaryView.swift */,
 				AEA0E219275238C800398A9D /* DeliveryView.swift */,
 				AEA030642753DED700290103 /* PlantSelectionView.swift */,
 				AEA030662753E90B00290103 /* PaymentView.swift */,
 				AEB5C443275F9A7E007FA143 /* PlantDetailView.swift */,
+				AED875B2276B07EC00DC20CA /* ArticleDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				AEDD3812275D159D002D6EE7 /* HomeViewModel.swift */,
+				AEE5CDF72768F50B00C98C84 /* PlantDetailViewModel.swift */,
+				AED875B6276B0E1200DC20CA /* DeliveryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -194,6 +225,11 @@
 				AEA0E21B2752694F00398A9D /* CardOrder.swift */,
 				AEA0E21D275272AB00398A9D /* AddressCards.swift */,
 				AEDD3814275D1769002D6EE7 /* RactangleCardPlants.swift */,
+				AEE5CDF52768A95E00C98C84 /* MissionList.swift */,
+				AED875A8276ADB7500DC20CA /* ArticleCards.swift */,
+				AED875AA276ADEE900DC20CA /* ArticleList.swift */,
+				AED875AE276AEBD300DC20CA /* CategoryStack.swift */,
+				AED875B8276C1BE900DC20CA /* HistoryCards.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -269,24 +305,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED875A5276AD88300DC20CA /* Article.swift in Sources */,
 				AE56AE782759119700C4B4AE /* Customer.swift in Sources */,
 				AEDD3815275D1769002D6EE7 /* RactangleCardPlants.swift in Sources */,
 				AE56AE7A2759119F00C4B4AE /* Plant.swift in Sources */,
 				AEA0E21C2752694F00398A9D /* CardOrder.swift in Sources */,
 				AEDD3819275DBB78002D6EE7 /* LoadDataFromJson.swift in Sources */,
+				AED875B3276B07EC00DC20CA /* ArticleDetailView.swift in Sources */,
 				AEA030672753E90B00290103 /* PaymentView.swift in Sources */,
 				AEA0E218275230DE00398A9D /* OrderSummaryView.swift in Sources */,
+				AEE5CDF82768F50B00C98C84 /* PlantDetailViewModel.swift in Sources */,
 				AEA0E21A275238C800398A9D /* DeliveryView.swift in Sources */,
 				AEA030652753DED800290103 /* PlantSelectionView.swift in Sources */,
 				AEA0E2142751D1AD00398A9D /* CardHome.swift in Sources */,
+				AED875AB276ADEE900DC20CA /* ArticleList.swift in Sources */,
+				AEE5CDF62768A95E00C98C84 /* MissionList.swift in Sources */,
+				AED875AF276AEBD300DC20CA /* CategoryStack.swift in Sources */,
 				AEA03069275511FB00290103 /* ProfileTabItem.swift in Sources */,
+				AED875A9276ADB7500DC20CA /* ArticleCards.swift in Sources */,
+				AED875B9276C1BE900DC20CA /* HistoryCards.swift in Sources */,
 				AEA0E2122751D09000398A9D /* HomeTabItem.swift in Sources */,
 				AEA0E2162751E2B000398A9D /* SelectionPlantView.swift in Sources */,
 				AEB5C444275F9A7E007FA143 /* PlantDetailView.swift in Sources */,
 				AEA0E21E275272AB00398A9D /* AddressCards.swift in Sources */,
+				AED875A7276AD9B100DC20CA /* ArticleTabItem.swift in Sources */,
 				AEA0E1FC2751CBE300398A9D /* ContentView.swift in Sources */,
+				AED875B7276B0E1200DC20CA /* DeliveryViewModel.swift in Sources */,
 				AEDD3813275D159D002D6EE7 /* HomeViewModel.swift in Sources */,
+				AEE5CDF42768719700C98C84 /* Mission.swift in Sources */,
 				AEA0E1FA2751CBE300398A9D /* useeds_appApp.swift in Sources */,
+				AED875B5276B082D00DC20CA /* HistoryTabItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
