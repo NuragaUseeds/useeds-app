@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct OrderSummaryView: View {
-    let plants: [Plant]
     @State var show: Int? = 0
-    var subTotal = 0
-    var total = 0
+    @StateObject private var viewModel: ViewModel
+    init(plants: [Plant]) {
+        let viewModel = ViewModel(plants: plants)
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack(spacing: 0) {
@@ -22,7 +24,7 @@ struct OrderSummaryView: View {
                     .padding(.bottom)
                 ScrollView  {
                     VStack(alignment: .leading) {
-                        ForEach(plants, id: \.id) { item in
+                        ForEach(viewModel.plants, id: \.id) { item in
                             CardOrder(plant: item)
                         }
                     }
@@ -35,7 +37,7 @@ struct OrderSummaryView: View {
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(Color("Green5"))
                         Spacer()
-                        Text("\(plants.reduce(0, {$0 + $1.price}))")
+                        Text("Rp. \(viewModel.subTotal)")
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(Color("Green5"))
                     }
@@ -46,7 +48,7 @@ struct OrderSummaryView: View {
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(Color("Green5"))
                         Spacer()
-                        Text("Rp. 15.000")
+                        Text("Rp. 15,000")
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(Color("Green5"))
                     }
@@ -57,7 +59,7 @@ struct OrderSummaryView: View {
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(Color("Green5"))
                         Spacer()
-                        Text("Rp. 15.000")
+                        Text("Rp. \(viewModel.total)")
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(Color("Green5"))
                     }
@@ -80,7 +82,7 @@ struct OrderSummaryView: View {
                             .cornerRadius(8)
                         
                     }
-                    NavigationLink(destination: DeliveryView(plants: plants), tag: 1, selection: $show) {
+                    NavigationLink(destination: DeliveryView(plants: viewModel.plants, total: viewModel.total), tag: 1, selection: $show) {
                         EmptyView()
                     }
                 }

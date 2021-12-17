@@ -22,8 +22,10 @@ struct HistoryCards: View {
                 }
                 
                 Spacer()
-                Image(systemName: "person")
-                    .font(.system(size: 50))
+                Image(plant.image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 80, height: 80, alignment: .center)
             }
             Button {
                 
