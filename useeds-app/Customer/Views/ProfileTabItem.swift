@@ -22,7 +22,7 @@ struct ProfileTabItem: View {
                 Text("Profile")
                     .font(.system(size: 24, weight: .bold))
                     .foregroundColor(Color.white)
-                    .padding(.top, 50)
+                    .padding(.top, 40)
                     .padding(.bottom, 50)
                 VStack(spacing: 10) {
                     Image(systemName: "person")
@@ -41,12 +41,14 @@ struct ProfileTabItem: View {
                             .font(.system(size: 13))
                     }
                 }
-                Spacer(minLength: 50)
-                List {
+                Spacer(minLength: 20)
+                ScrollView(showsIndicators: false) {
                     ForEach(item, id: \.self) { item in
-                        HStack {
+                        HStack(spacing: 10) {
                             Image(systemName: "pencil")
                             Text(item)
+                            Spacer()
+                            Image(systemName: "chevron.right")
                         }.padding()
                     }
                 }.padding()
@@ -64,7 +66,7 @@ struct ProfileTabItem: View {
                             .stroke(Color.red)
                             
                     ).padding(.horizontal)
-            }
+            }.padding()
         }.edgesIgnoringSafeArea(.top)
         
     }

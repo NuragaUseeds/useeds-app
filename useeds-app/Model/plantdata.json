@@ -1,0 +1,87 @@
+[
+    {
+        "name": "Kangkung",
+        "description": "Adalah jenis tanaman yang paling banyak ditanam",
+        "category": "Free",
+        "mission" : [
+            {
+            "id": 1,
+            "airStatus": "Need",
+            "nutrisiStatus": "Need",
+            "time": "08.00"
+            
+            },
+            {
+            "id": 2,
+            "airStatus": "Need",
+            "nutrisiStatus": "Need",
+            "time": "08.00"
+            },
+        ],
+        "price" : 0
+    },
+
+    {
+        "name": "Bayam",
+        "description": "Adalah jenis tanaman yang paling sehat",
+        "category": "Free",
+        "mission" : [
+            {
+            "id": 1,
+            "airStatus": "Need",
+            "nutrisiStatus": "Need",
+            "time": "08.00"
+            },
+            {
+            "id": 2,
+            "airStatus": "Need",
+            "nutrisiStatus": "Need",
+            "time": "08.00"
+            }
+        ],
+        "price" : 0
+    },
+
+    {
+        "name": "Toge",
+        "description": "Adalah jenis tanaman yang paling banyak ditanam",
+        "category": "Premium",
+        "mission" : [
+            {
+            "id": 1,
+            "airStatus": "Need",
+            "nutrisiStatus": "Need",
+            "time": "08.00"
+            },
+            {
+            "id": 2,
+            "airStatus": "Need",
+            "nutrisiStatus": "Need",
+            "time": "08.00"
+            }
+        ],
+        "price" : 3000
+    },
+
+    {
+        "name": "Kentang",
+        "description": "Adalah jenis tanaman yang umbi-umbian",
+        "category": "Premium",
+        "mission" : [
+            {
+            "id": 1,
+            "airStatus": "Need",
+            "nutrisiStatus": "Need",
+            "time": "08.00"
+            },
+            {
+            "id": 2,
+            "airStatus": "Need",
+            "nutrisiStatus": "Need",
+            "time": "08.00"
+            }
+        ],
+        "price" : 3000
+    }
+    
+]

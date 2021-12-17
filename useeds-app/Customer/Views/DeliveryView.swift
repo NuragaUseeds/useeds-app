@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct DeliveryView: View {
-    let plants: [String]
+    
     @State var selections: String = ""
+    @StateObject private var viewModel: ViewModel
+    init(plants: [Plant]) {
+        let viewModel = ViewModel(plants: plants)
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     var body: some View {
         VStack {
             Text("Delivery Info")
@@ -50,8 +55,7 @@ struct DeliveryView: View {
                     .font(.system(size: 16, weight: .bold))
             }.padding()
             Button {
-                let kata = plants.joined(separator: "%0a")
-                if let url = URL(string: "https://wa.me/+6282176835992?text=hello%0\(kata)"),
+                if let url = URL(string: "https://wa.me/+6282176835992?text=hello%0\(viewModel.textBody)"),
                 UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: [:])
                 }
@@ -72,6 +76,6 @@ struct DeliveryView: View {
 
 struct DeliveryView_Previews: PreviewProvider {
     static var previews: some View {
-        DeliveryView(plants: ["try"])
+        DeliveryView(plants: Customer.preview.plants!)
     }
 }

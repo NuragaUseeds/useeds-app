@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SelectionPlantView: View {
-    var plants: [String] = ["Bayam", "Kangkung", "Sayur", "Toge"]
-    @State var selections = [String]()
+    @State var selections = [Plant]()
     @State var show: Int? = 0
+    @ObservedObject var data = JsonHelper()
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -28,21 +28,25 @@ struct SelectionPlantView: View {
                     Text("What do you want to plant today?")
                         .font(.system(size: 16, weight: .regular))
                         .foregroundColor(.white)
-                    NavigationLink(destination: PlantSelectionView(items: plants, selections: $selections)) {
+                    NavigationLink(destination: PlantSelectionView(items: data.plants, selections: $selections)) {
                         if !selections.isEmpty {
                             Text("Edit Your Plants")
                                 .font(.system(size: 16, weight: .regular))
                                 .foregroundColor(.gray)
+                                .frame(width: UIScreen.main.bounds.width/1.2)
+                                .padding(.vertical)
+                                .background(Color.white)
+                                .cornerRadius(8)
                         } else {
                             Text("Select Your Plants")
                                 .font(.system(size: 16, weight: .regular))
-                                .foregroundColor(.gray)
+                                       .foregroundColor(.gray)
+                                .frame(width: UIScreen.main.bounds.width/1.2)
+                                .padding(.vertical)
+                                .background(Color.white)
+                                .cornerRadius(8)
                         }
                     }
-                    .padding(.vertical)
-                    .frame(width: UIScreen.main.bounds.width/1.2)
-                    .background(Color.white)
-                    .cornerRadius(8)
                 }
                 
                 Spacer(minLength: 100)
@@ -50,10 +54,10 @@ struct SelectionPlantView: View {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 40) {
                         if !selections.isEmpty {
-                            ForEach(selections, id: \.self) { plant in
+                            ForEach(selections, id: \.id) { plant in
                                 VStack {
                                     Image(systemName: "person")
-                                    Text(plant)
+                                    Text(plant.name)
                                 }
                                 .frame(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.width/3)
                                 .overlay(
@@ -74,14 +78,14 @@ struct SelectionPlantView: View {
                 }label: {
                     Text("PlANT NOW")
                         .font(.system(size: 16, weight: .bold))
-                        .foregroundColor(.white)
+                        .foregroundColor(selections.isEmpty ? .gray : .white)
                         .padding(.vertical, 20)
                         .frame(width: UIScreen.main.bounds.width/1.2)
-                        .background(Color("BlueButton"))
+                        .background(selections.isEmpty ? Color(.systemGray4) : Color("BlueButton"))
                         .cornerRadius(8)
                     
-                }
-                NavigationLink(destination: OrderSummaryView(plants: plants), tag: 1, selection: $show) {
+                }.disabled(selections.isEmpty)
+                NavigationLink(destination: OrderSummaryView(plants: selections), tag: 1, selection: $show) {
                     EmptyView()
                 }
             }.padding(.top, 100)

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct PlantSelectionView: View {
-    let items: [String]
-    @Binding var selections: [String]
-    init(items: [String], selections: Binding<[String]>) {
+    let items: [Plant]
+    @Binding var selections: [Plant]
+    init(items: [Plant], selections: Binding<[Plant]>) {
         self.items = items
         self._selections = selections
         UITableView.appearance().backgroundColor = UIColor(Color("Green3"))
@@ -23,37 +23,56 @@ struct PlantSelectionView: View {
                     .padding(.top, 100)
                     .padding(.bottom)
                 List {
-                    ForEach(self.items, id: \.self) { item in
-                        MultipleSelectionRow(title: item, isSelected: self.selections.contains(item)) {
-                            if self.selections.contains(item) {
-                                self.selections.removeAll(where: { $0 == item })
+                    ForEach(items) { selectable in
+                        Button(action: { toggleSelection(selectable: selectable) }) {
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text(selectable.name)
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 17, weight: .semibold))
+                                    Text(selectable.category.rawValue)
+                                        .foregroundColor(.gray)
+                                        .font(.system(size: 15, weight: .regular))
+                                }
+                                Spacer()
+                                if selections.contains { $0.id == selectable.id } {
+                                    Image(systemName: "checkmark")
+                                        .foregroundColor(.black)
+                                }
                             }
-                            else {
-                                self.selections.append(item)
-                            }
-                        }
+                        }.tag(selectable.id)
                     }
                 }
             }.background(Color("Green3"))
             .edgesIgnoringSafeArea(.top)
     }
+    
+    private func toggleSelection(selectable: Plant) {
+        if let existingIndex = selections.firstIndex(where: { $0.id == selectable.id }) {
+            selections.remove(at: existingIndex)
+        } else {
+            selections.append(selectable)
+        }
+    }
+    
+    
 }
 
 struct PlantSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        PlantSelectionView(items: ["Sayur", "Mayur", "Kangkung", "Bayam", "Ayam"], selections: .constant(["Sayur"]))
+        PlantSelectionView(items: Customer.preview.plants!, selections: .constant(Customer.preview.plants!))
     }
 }
 
 struct MultipleSelectionRow: View {
-    var title: String
+    var plant: Plant
     var isSelected: Bool
     var action: () -> Void
     
     var body: some View {
         Button(action: self.action) {
             HStack {
-                Text(self.title)
+                Text(self.plant.name)
                     .foregroundColor(Color.black)
                 if self.isSelected {
                     Spacer()

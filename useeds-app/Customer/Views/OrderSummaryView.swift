@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct OrderSummaryView: View {
-    let plants: [String]
+    let plants: [Plant]
     @State var show: Int? = 0
+    var subTotal = 0
+    var total = 0
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack(spacing: 0) {
@@ -20,8 +22,8 @@ struct OrderSummaryView: View {
                     .padding(.bottom)
                 ScrollView  {
                     VStack(alignment: .leading) {
-                        ForEach(plants, id: \.self) { _ in
-                            CardOrder()
+                        ForEach(plants, id: \.id) { item in
+                            CardOrder(plant: item)
                         }
                     }
                     .padding()
@@ -33,7 +35,7 @@ struct OrderSummaryView: View {
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(Color("Green5"))
                         Spacer()
-                        Text("Rp. 20.000")
+                        Text("\(plants.reduce(0, {$0 + $1.price}))")
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(Color("Green5"))
                     }
@@ -97,6 +99,6 @@ struct OrderSummaryView: View {
 
 struct OrderSummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderSummaryView(plants: ["kuangkung", "bayam", "sayur", "lala", "huhu", "duar"])
+        OrderSummaryView(plants: Customer.preview.plants!)
     }
 }
