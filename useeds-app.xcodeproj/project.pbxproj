@@ -101,6 +101,7 @@
 		AED875B8276C1BE900DC20CA /* HistoryCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCards.swift; sourceTree = "<group>"; };
 		AED875BA276CF0A500DC20CA /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		AED875BC276CF6D800DC20CA /* OrderSummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryViewModel.swift; sourceTree = "<group>"; };
+		AED875BE276D0E3B00DC20CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AEDD3812275D159D002D6EE7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AEDD3814275D1769002D6EE7 /* RactangleCardPlants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RactangleCardPlants.swift; sourceTree = "<group>"; };
 		AEDD3816275DBB14002D6EE7 /* plantdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plantdata.json; sourceTree = "<group>"; };
@@ -179,6 +180,7 @@
 		AEA0E1F82751CBE300398A9D /* useeds-app */ = {
 			isa = PBXGroup;
 			children = (
+				AED875BE276D0E3B00DC20CA /* Info.plist */,
 				AEA0E1F92751CBE300398A9D /* useeds_appApp.swift */,
 				AEA0E20D2751CEAB00398A9D /* Customer */,
 				AEA0E20C2751CE9E00398A9D /* Constants */,
@@ -651,6 +653,8 @@
 				DEVELOPMENT_TEAM = 4VR7S48W5N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "useeds-app/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -681,6 +685,8 @@
 				DEVELOPMENT_TEAM = 4VR7S48W5N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "useeds-app/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
