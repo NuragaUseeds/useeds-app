@@ -11,16 +11,18 @@ struct CardOrder: View {
     let plant: Plant
     var body: some View {
         HStack {
-            Image(systemName: "person")
+            Image(plant.image)
                 .font(.system(size: 70))
             VStack(alignment: .leading, spacing: 10) {
                 Text(plant.name)
                     .font(.system(size: 16))
+                    .foregroundColor(Color.greenColor5)
                 Text(plant.category.rawValue)
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
                 Text("Rp. \(plant.price)")
                     .font(.system(size: 12, weight: .bold))
+                    .foregroundColor(Color.greenColor5)
             }
             Spacer()
         }
