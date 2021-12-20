@@ -15,7 +15,7 @@ struct ContentView: View {
         standardAppearance.backgroundColor = UIColor(Color("Green5"))
         standardAppearance.stackedLayoutAppearance.focused.titleTextAttributes = [.foregroundColor: UIColor.white]
         standardAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
-        standardAppearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.black]
+        standardAppearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor(Color.darkGray)]
         standardAppearance.stackedLayoutAppearance.normal.iconColor = UIColor(Color.white)
         UITabBar.appearance().standardAppearance = standardAppearance
         
@@ -48,8 +48,8 @@ struct ContentView: View {
                     }
                 
             }
-            .accentColor(.black)
-        }
+            .accentColor(Color.darkGray)
+        }.accentColor(Color.darkGray)
     }
 }
 

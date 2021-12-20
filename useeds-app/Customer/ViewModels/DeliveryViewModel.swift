@@ -11,9 +11,11 @@ import SwiftUI
 extension DeliveryView {
     class ViewModel: ObservableObject {
         @Published var plants: [Plant]
+        @Published var total: Int
         
-        init(plants: [Plant]) {
+        init(plants: [Plant], total: Int) {
             self.plants = plants
+            self.total = total
         }
         
         var textBody: String {
