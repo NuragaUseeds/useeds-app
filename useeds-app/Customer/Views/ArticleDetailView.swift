@@ -10,12 +10,19 @@ import SwiftUI
 struct ArticleDetailView: View {
     let article: Article
     var body: some View {
-        VStack {
-            Image(systemName: "book")
-            Text(article.title)
-                .font(.system(size: 24, weight: .bold))
-                .foregroundColor(Color.green)
-            Text(article.category.rawValue)
+        VStack(spacing: 20) {
+            VStack(spacing: 10) {
+                Image(systemName: "book")
+                    .font(.system(size: 30))
+                    .foregroundColor(Color.greenColor5)
+                Text(article.title)
+                    .font(.system(size: 24, weight: .bold))
+                    .foregroundColor(Color.greenColor5)
+                Text(article.category.rawValue)
+                    .font(.system(size: 14, weight: .bold))
+                    .foregroundColor(Color.gray)
+            }
+            
             
             Image(article.image)
                 .resizable()

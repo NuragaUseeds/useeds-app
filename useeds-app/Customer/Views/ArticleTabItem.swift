@@ -33,7 +33,9 @@ struct ArticleTabItem: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             ForEach(articles, id: \.id) { item in
-                                ArticleCards(article: item)
+                                NavigationLink(destination: ArticleDetailView(article: item)) {
+                                    ArticleCards(article: item)
+                                }
                             }
                         }
                     }
@@ -60,20 +62,26 @@ struct ArticleTabItem: View {
                         }
                         if category == .all {
                             ForEach(articles, id: \.id) { item in
-                                VStack {
-                                    ArticleList(article: item)
+                                NavigationLink(destination: ArticleDetailView(article: item)) {
+                                    VStack {
+                                        ArticleList(article: item)
+                                    }
                                 }
                             }
                         }else if category == .tech {
                             ForEach(articlesTech, id: \.id) { item in
-                                VStack {
-                                    ArticleList(article: item)
+                                NavigationLink(destination: ArticleDetailView(article: item)) {
+                                    VStack {
+                                        ArticleList(article: item)
+                                    }
                                 }
                             }
                         }else {
                             ForEach(articlesDesc, id: \.id) { item in
-                                VStack {
-                                    ArticleList(article: item)
+                                NavigationLink(destination: ArticleDetailView(article: item)) {
+                                    VStack {
+                                        ArticleList(article: item)
+                                    }
                                 }
                             }
                         }
