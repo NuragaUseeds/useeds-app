@@ -16,7 +16,9 @@ struct LoginView: View {
             TextField("Email", text: $email)
                 .keyboardType(.emailAddress)
                 .autocapitalization(.none)
+                .cornerRadius(8)
             SecureField("Password", text: $password)
+                .cornerRadius(8)
         }
         .padding()
     }

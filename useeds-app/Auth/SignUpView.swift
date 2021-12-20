@@ -18,15 +18,19 @@ struct SignUpView: View {
         Group {
             TextField("Nama", text: $name)
                 .autocapitalization(.none)
+                .cornerRadius(8)
             TextField("Email", text: $email)
                 .keyboardType(.emailAddress)
                 .autocapitalization(.none)
+                .cornerRadius(8)
             SecureField("Password", text: $password)
             TextField("Nomor HP", text: $phoneNumber)
                 .keyboardType(.phonePad)
                 .autocapitalization(.none)
+                .cornerRadius(8)
             TextField("Alamat", text: $address)
                 .autocapitalization(.none)
+                .cornerRadius(8)
         }
         .padding()
 
