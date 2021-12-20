@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct AuthView: View {
-    @State var isLogin = false
-    @State var isShowImagePicker = false
-    @State var image: UIImage?
+    @State private var isLogin = false
+    @State private var isAuthSuccess = false
+    @State private var isActive = false
+    @State private var isShowImagePicker = false
+    @State private var image: UIImage?
 
     @StateObject var viewModel = CustomerViewModel()
 
@@ -58,17 +60,23 @@ struct AuthView: View {
                             .background(Color.white)
                     }
 
-                    Button {
-                        handleAction()
-                    } label: {
-                        Text(isLogin ? "Login": "SignUp")
-                            .padding(.vertical, 18)
-                            .frame(width: UIScreen.main.bounds.width - 32, height: 50)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(5)
-
+                    NavigationLink(destination: ContentView(), isActive: $isActive) {
+                        Button {
+                            handleAction()
+                            if !isAuthSuccess {
+                                isActive.toggle()
+                            }
+                        } label: {
+                            Text(isLogin ? "Login": "SignUp")
+                                .padding(.vertical, 18)
+                                .frame(width: UIScreen.main.bounds.width - 32, height: 50)
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(5)
+                        }
                     }
+
+
 
                     Text(viewModel.errorMessage)
                         .foregroundColor(.red)
@@ -102,11 +110,10 @@ extension AuthView {
                 return
             }
             //success
+            isAuthSuccess.toggle()
 
 
             viewModel.errorMessage = "Successfully logged in as a user: \(result?.user.uid ?? "")"
-
-            ContentView()
         }
     }
 
@@ -116,10 +123,11 @@ extension AuthView {
                 viewModel.errorMessage = "Failed to create user: \(error)"
                 return
             }
+            
+            isAuthSuccess.toggle()
 
             viewModel.errorMessage = "Successfully created user: \(result?.user.uid ?? "")"
             viewModel.uploadImageToStorage(image: image)
-            ContentView()
         }
     }
 }
