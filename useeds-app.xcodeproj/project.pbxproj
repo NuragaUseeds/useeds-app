@@ -270,9 +270,9 @@
 			isa = PBXGroup;
 			children = (
 				AEA0E2112751D09000398A9D /* HomeTabItem.swift */,
-				AEA03068275511FB00290103 /* ProfileTabItem.swift */,
 				AED875A6276AD9B100DC20CA /* ArticleTabItem.swift */,
 				AED875B4276B082D00DC20CA /* HistoryTabItem.swift */,
+				AEA03068275511FB00290103 /* ProfileTabItem.swift */,
 				AEA0E2152751E2B000398A9D /* SelectionPlantView.swift */,
 				AEA0E217275230DE00398A9D /* OrderSummaryView.swift */,
 				AEA0E219275238C800398A9D /* DeliveryView.swift */,
