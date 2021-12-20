@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/git,swift,xcode,macos,firebase,swiftpackagemanager
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,swift,xcode,macos,firebase,swiftpackagemanager
 
+###xcuserstate
+*.xcuserstate
 ### CocoaPods ###
 Pods/
 

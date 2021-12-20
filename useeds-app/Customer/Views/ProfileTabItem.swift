@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ProfileTabItem: View {
+    @ObservedObject var viewModel = CustomerViewModel()
     let item = ["Account", "Notification", "Change Language", "Privacy & Policy", "Rate This App", "Help Center", "About"]
+
     init() {
         UITableView.appearance().backgroundColor = UIColor(Color.clear)
         UITableView.appearance().separatorColor = UIColor(Color.clear)
@@ -25,12 +27,12 @@ struct ProfileTabItem: View {
                     .padding(.top, 40)
                     .padding(.bottom, 50)
                 VStack(spacing: 10) {
-                    Image(systemName: "person")
-                        .font(.system(size: 90))
-                        .clipShape(Circle())
-                        .shadow(radius: 10)
-                        .overlay(Circle().stroke(Color("Green5"), lineWidth: 4))
-                    Text("Muhammad Sholikhin Tofa")
+                    RemoteImageView(url:URL(fileURLWithPath: viewModel.photo), placeholder: {
+                        Image(systemName:"placeholder").frame(width: 40)
+                    }) {
+                        $0.scaledToFit().clipShape(Circle())
+                    }
+                    Text(viewModel.name)
                         .font(.system(size: 16, weight: .semibold))
                         .foregroundColor(.white)
                     Button {

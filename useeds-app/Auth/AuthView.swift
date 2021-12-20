@@ -7,10 +7,12 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct AuthView: View {
     @State var isLogin = false
-    @ObservedObject var viewModel = LoginViewModel()
-    
+    @State var isShowImagePicker = false
+    @State var image: UIImage?
+
+    @StateObject var viewModel = CustomerViewModel()
     var body: some View {
         ZStack(alignment: .bottom) {
             Image("PlantBgWhite")
@@ -19,38 +21,36 @@ struct LoginView: View {
             ScrollView {
                 VStack{
                     if !isLogin {
-                        VStack(alignment: .leading) {
-                            Text("New Account")
-                                .font(.system(size: 32, weight: .semibold))
-                                .foregroundColor(.white)
-                            Text("Create your account to get the access this app")
-                                .padding(.bottom, 50)
-                                .foregroundColor(.white)
+                        Button {
+                            isShowImagePicker.toggle()
+                        } label: {
+
+                            VStack {
+
+                                if let image = image {
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 128, height: 128)
+                                        .cornerRadius(64)
+                                } else {
+                                    Image(systemName: "person.fill")
+                                        .font(.system(size: 64))
+                                        .padding()
+                                        .foregroundColor(Color(.label))
+                                }
+                            }
+                            .overlay(RoundedRectangle(cornerRadius: 64).stroke(Color.black, lineWidth: 3))
+
+
                         }
-                    }else {
-                        VStack(spacing: 10) {
-                            Image("Useeds")
-                            Text("Welcome!")
-                                .font(.system(size: 32, weight: .semibold))
-                                .foregroundColor(.white)
-                            Text("Please enter your registered\nemail to continue")
-                                .multilineTextAlignment(.center)
-                                .foregroundColor(.white)
-                                .padding(.bottom, 50)
-                        }
+                        SignUpView(name: $viewModel.name, email: $viewModel.email, password: $viewModel.password, phoneNumber: $viewModel.phoneNumber, address: $viewModel.address)
+                            .background(Color.white)
+
+                    } else {
+                        LoginView(email: $viewModel.email, password: $viewModel.password)
+                            .background(Color.white)
                     }
-                    
-                    Group {
-                        TextField("Email", text: $viewModel.email)
-                            .keyboardType(.emailAddress)
-                            .autocapitalization(.none)
-                        SecureField("Password", text: $viewModel.password)
-                    }
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(8)
-                    
-                    
                     Button {
                         handleAction()
                     } label: {
@@ -101,13 +101,14 @@ struct LoginView: View {
             .padding(.horizontal)
             .padding(.top, 70)
         }
-        
-        .background(LinearGradient(gradient: Gradient(colors: [Color.greenColor5, Color.greenColor4, Color.greenColor4]), startPoint: .bottomLeading, endPoint: .topTrailing))
-        .edgesIgnoringSafeArea(.all)
+        .navigationViewStyle(StackNavigationViewStyle())
+        .fullScreenCover(isPresented: $isShowImagePicker, onDismiss: nil) {
+            ImagePicker(image: $image)
+        }
     }
 }
 
-extension LoginView {
+extension AuthView {
     private func handleAction() {
         if isLogin {
             userLogin()
@@ -123,8 +124,10 @@ extension LoginView {
                 viewModel.errorMessage = "Failed to logged in as user: \(error)"
                 return
             }
-            
+            //success
             viewModel.errorMessage = "Successfully logged in as a user: \(result?.user.uid ?? "")"
+
+            ContentView()
         }
     }
     
@@ -136,13 +139,14 @@ extension LoginView {
             }
             
             viewModel.errorMessage = "Successfully created user: \(result?.user.uid ?? "")"
-            isLogin = true
+            viewModel.uploadImageToStorage(image: image)
+            ContentView()
         }
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
+struct AuthView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        AuthView()
     }
 }
