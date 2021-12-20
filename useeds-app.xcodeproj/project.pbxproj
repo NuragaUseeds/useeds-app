@@ -319,8 +319,8 @@
 				AEDD3814275D1769002D6EE7 /* RactangleCardPlants.swift */,
 				AEE5CDF52768A95E00C98C84 /* MissionList.swift */,
 				AED875A8276ADB7500DC20CA /* ArticleCards.swift */,
-				AED875AA276ADEE900DC20CA /* ArticleList.swift */,
 				AED875AE276AEBD300DC20CA /* CategoryStack.swift */,
+				AED875AA276ADEE900DC20CA /* ArticleList.swift */,
 				AED875B8276C1BE900DC20CA /* HistoryCards.swift */,
 			);
 			path = Components;

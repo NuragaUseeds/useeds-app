@@ -101,8 +101,12 @@ extension AuthView {
                 viewModel.errorMessage = "Failed to logged in as user: \(error)"
                 return
             }
+            //success
+
 
             viewModel.errorMessage = "Successfully logged in as a user: \(result?.user.uid ?? "")"
+
+            ContentView()
         }
     }
 
@@ -115,6 +119,7 @@ extension AuthView {
 
             viewModel.errorMessage = "Successfully created user: \(result?.user.uid ?? "")"
             viewModel.uploadImageToStorage(image: image)
+            ContentView()
         }
     }
 }
