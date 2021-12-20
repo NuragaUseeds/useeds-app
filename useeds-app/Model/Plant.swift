@@ -11,7 +11,7 @@ import SwiftUI
 
 struct Plant: Codable, Identifiable {
     var id = UUID().uuidString
-    var image: String?
+    var image: String
     var name: String
     var description: String
     var mission: [Mission]
@@ -22,6 +22,7 @@ struct Plant: Codable, Identifiable {
     
     private enum CodingKeys: String, CodingKey {
         case name
+        case image
         case description
         case category
         case mission

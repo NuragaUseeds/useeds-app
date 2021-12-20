@@ -1,7 +1,8 @@
 [
     {
-        "name": "Kangkung",
+        "name": "Selada",
         "description": "Adalah jenis tanaman yang paling banyak ditanam",
+        "image" : "Selada",
         "category": "Free",
         "mission" : [
             {
@@ -24,6 +25,7 @@
     {
         "name": "Bayam",
         "description": "Adalah jenis tanaman yang paling sehat",
+        "image" : "Bayam",
         "category": "Free",
         "mission" : [
             {
@@ -43,8 +45,9 @@
     },
 
     {
-        "name": "Toge",
+        "name": "Seledri",
         "description": "Adalah jenis tanaman yang paling banyak ditanam",
+        "image" : "Seledri",
         "category": "Premium",
         "mission" : [
             {
@@ -64,8 +67,9 @@
     },
 
     {
-        "name": "Kentang",
+        "name": "Mint",
         "description": "Adalah jenis tanaman yang umbi-umbian",
+        "image" : "Mint",
         "category": "Premium",
         "mission" : [
             {

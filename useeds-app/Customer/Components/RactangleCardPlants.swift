@@ -11,13 +11,18 @@ struct RactangleCardPlants: View {
     let plant: Plant
     var body: some View {
         VStack {
-            Image(systemName: "person")
+            Image(plant.image)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 80, height: 80, alignment: .center)
             Text(plant.name)
+                .font(.system(size: 12, weight: .bold))
+                .foregroundColor(Color.greenColor5)
         }
         .frame(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.width/3)
         .overlay(
             RoundedRectangle(cornerRadius: 24)
-                .stroke(Color.green)
+                .stroke(Color.greenColor5)
         )
     }
 }

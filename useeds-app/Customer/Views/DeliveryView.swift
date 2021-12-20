@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct DeliveryView: View {
-    
     @State var selections: String = ""
     @StateObject private var viewModel: ViewModel
-    init(plants: [Plant]) {
-        let viewModel = ViewModel(plants: plants)
+    init(plants: [Plant], total: Int) {
+        let viewModel = ViewModel(plants: plants, total: total)
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     var body: some View {
         VStack {
-            Text("Delivery Info")
+            Text("Checkout")
                 .font(.system(size: 24, weight: .bold))
                 .foregroundColor(Color("Green5"))
                 .padding(.top, 100)
@@ -50,7 +49,7 @@ struct DeliveryView: View {
                     .foregroundColor(Color("Green5"))
                     .font(.system(size: 16, weight: .bold))
                 Spacer()
-                Text("Rp. 25.000")
+                Text("Rp. \(viewModel.total)")
                     .foregroundColor(Color("Green5"))
                     .font(.system(size: 16, weight: .bold))
             }.padding()
@@ -76,6 +75,6 @@ struct DeliveryView: View {
 
 struct DeliveryView_Previews: PreviewProvider {
     static var previews: some View {
-        DeliveryView(plants: Customer.preview.plants!)
+        DeliveryView(plants: Customer.preview.plants!, total: 0)
     }
 }
